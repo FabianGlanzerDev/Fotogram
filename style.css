@@ -34,8 +34,8 @@ h1 {
     text-align: center;
     color: white;
     font-family: figtree;
-    padding-bottom: 80px;
     padding-top: 160px;
+    margin: 0;
 }
 
 /*footer*/
@@ -65,15 +65,16 @@ h1 {
 
 /* Grid-Galerie */
 .gallery {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1440px;
+    margin: 0;
     display: grid;
     /* Automatisch so viele Spalten wie passen (mit px werden die Spalten kleiner und bilder passen sich anders an*/
-    grid-template-columns: repeat(auto-fit, 160px);
+    grid-template-columns: repeat(auto-fit, 190px);
     gap: 22px;
     justify-content: center;
     align-items: start;
     padding-bottom: 160px;
+
 }
 
 /* Bild-Karten-Look */
@@ -87,9 +88,10 @@ h1 {
     transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
-/*Hover*/
+/*Hover'n*/
 .gallery img:hover {
     transform: translateY(-4px) scale(1.02);
     border-color: rgba(0, 255, 255, 0.45);
     box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
 }
+
