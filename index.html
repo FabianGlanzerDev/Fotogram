@@ -21,51 +21,58 @@
     <h1>Your personal photo album</h1>
 
     <section class="gallery">
-        <img src="./img/coal-power-plant-6972028_1920.jpg" alt="">
-        <img src="./img/factory-2813380_1920.jpg" alt="">
-        <img src="./img/factory-4338627_1920.jpg" alt="">
-        <img src="./img/fan-3645379_1920.jpg" alt="">
-        <img src="./img/ferrybridge-5428427_1920.jpg" alt="">
-        <img src="./img/hydroelectric-power-station-1264100_1920.jpg" alt="">
-        <img src="./img/hydropower-plant-6587753_1920.jpg" alt="">
-        <img src="./img/power-plant-1320184_1920.jpg" alt="">
-        <img src="./img/power-plant-2918331_1920.jpg" alt="">
-        <img src="./img/power-plant-344231_1920.jpg" alt="">
-        <img src="./img/power-station-2802622_1920.jpg" alt="">
-        <img src="./img/power-station-6579092_1920.jpg" alt="">
+        <img src="./img/coal-power-plant-6972028_1920.jpg" alt="Kohlekraftwerk mit Schornsteinen und aufsteigendem Rauch">
+        <img src="./img/factory-2813380_1920.jpg" alt="Industriefabrik mit mehreren Gebäuden und Schornsteinen">
+        <img src="./img/factory-4338627_1920.jpg" alt="Große Industrieanlage mit Rohrleitungen und Produktionshallen">
+        <img src="./img/fan-3645379_1920.jpg" alt="Industrieller Ventilator in einer Fabrikhalle">
+        <img src="./img/ferrybridge-5428427_1920.jpg" alt="Kohlekraftwerk Ferrybridge mit markanten Kühltürmen">
+        <img src="./img/hydroelectric-power-station-1264100_1920.jpg" alt="Wasserkraftwerk mit Staumauer und Turbinengebäude">
+        <img src="./img/hydropower-plant-6587753_1920.jpg" alt="Wasserkraftanlage mit fließendem Wasser und Turbinen">
+        <img src="./img/power-plant-1320184_1920.jpg" alt="Großes Kraftwerk mit mehreren Gebäuden und Schornsteinen">
+        <img src="./img/power-plant-2918331_1920.jpg" alt="Industrielles Kraftwerk mit Dampfwolken">
+        <img src="./img/power-plant-344231_1920.jpg" alt="Kraftwerksanlage bei Tageslicht">
+        <img src="./img/power-station-2802622_1920.jpg" alt="Elektrizitätswerk mit Hochspannungsanlagen">
+        <img src="./img/power-station-6579092_1920.jpg" alt="Rauchende Kraftwerksanlage mit Schornstein und Gebäuden">
+
     </section>
-    <div class="lightbox" id="lightbox">
-  <div class="lightbox-modal">
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title"
+            aria-describedby="lightbox-counter" tabindex="-1">
+            <div class="lightbox-header">
+                <span class="lightbox-title" id="lightbox-title">Bildname</span>
 
-    <div class="lightbox-header">
-      <span class="lightbox-title" id="lightbox-title">Bildname</span>
-      <button class="close" type="button">&times;</button>
+                <button class="close" type="button" aria-label="Lightbox schließen">
+                    &times;
+                </button>
+            </div>
+
+            <img class="lightbox-img" id="lightbox-img" alt="" />
+
+            <div class="lightbox-footer" aria-label="Bildnavigation">
+                <button class="prev" type="button" aria-label="Vorheriges Bild">
+                    <img src="./img/pfeil_links_zurück.png" alt="" />
+                </button>
+
+                <span class="lightbox-counter" id="lightbox-counter" aria-live="polite">
+                    1/12
+                </span>
+
+                <button class="next" type="button" aria-label="Nächstes Bild">
+                    <img src="./img/pfeil_rechts_weiter.png" alt="" />
+                </button>
+            </div>
+        </div>
     </div>
 
-    <img class="lightbox-img" id="lightbox-img" alt="">
-
-    <div class="lightbox-footer">
-      <button class="prev" type="button">
-        <img src="./img/pfeil_links_zurück.png" alt="">
-      </button>
-
-      <span class="lightbox-counter" id="lightbox-counter">1/12</span>
-
-      <button class="next" type="button">
-        <img src="./img/pfeil_rechts_weiter.png" alt="">
-      </button>
-    </div>
-
-  </div>
-</div>
 
 
-        
+
+
     </body>
 
 
 
-<script src="main.js"></script>
+    <script src="main.js"></script>
 
 </main>
 
