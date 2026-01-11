@@ -95,3 +95,117 @@ h1 {
     box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
 }
 
+/* Dunkler Hintergrund über der ganzen Seite */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Modal Box */
+.lightbox-modal{
+  width: 688px;
+  height: 675px;
+  background: #09212A;
+  border-radius: 40px;
+  padding: 56px 64px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.lightbox-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 28px;
+}
+
+.lightbox-title{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Close Button */
+.close{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+/* Image */
+.lightbox-img{
+  width: 560px;
+  height: 374.71px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Footer */
+.lightbox-footer{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+/* Buttons*/
+.prev, .next{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Pfeiltasten zum Weiterschalten*/
+.prev img, .next img{
+  width: 60px;
+  height: 60px;
+}
+
+/*Zurückschalten Hovern*/
+.prev img:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(0, 255, 255, 0.45);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+}
+
+/*Weiterschalten Hovern*/
+.next  img:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(0, 255, 255, 0.45);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+}
+
+/* Counter */
+.lightbox-counter{
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*Schließen Hovern*/
+.close:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(255, 0, 0, 0.45);
+    box-shadow: 0 16px 38px rgba(255, 0, 0, 0.45);
+    border-radius: 50%;
+}
