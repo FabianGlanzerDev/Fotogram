@@ -5,6 +5,13 @@ body {
   margin: 0;
 }
 
+html,
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
 .header {
   width: 100%;
   height: 80px;
@@ -206,9 +213,11 @@ h1 {
   color: white;
   font-size: 16px;
   font-weight: 600;
-   width: 64px;              /* feste Breite -> Buttons bleiben fix */
+  width: 64px;
+  /* feste Breite -> Buttons bleiben fix */
   text-align: center;
-  font-variant-numeric: tabular-nums; /* Ziffern alle gleich breit */
+  font-variant-numeric: tabular-nums;
+  /* Ziffern alle gleich breit */
 }
 
 /*Schließen Hovern*/
@@ -241,33 +250,38 @@ h1 {
 
 /*Smartphone*/
 @media (max-width: 768px) {
-  .lightbox-modal{
+  .lightbox-modal {
     width: min(420px, 92vw);
     height: min(600px, 88vh);
     padding: 16px;
     display: grid;
-    grid-template-rows: 64px 1fr 90px; /* Header | Bild | Footer */
+    grid-template-rows: 64px 1fr 90px;
+    /* Header | Bild | Footer */
     gap: 12px;
     overflow: hidden;
   }
-.gallery {
+
+  .gallery {
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 160px;
   }
-  .lightbox-header{
-    margin: 0;              /* wichtig */
+
+  .lightbox-header {
+    margin: 0;
+    /* wichtig */
     align-self: center;
   }
 
-  .lightbox-title{
+  .lightbox-title {
     max-width: 80%;
     display: -webkit-box;
-    -webkit-line-clamp: 2;   /* max 2 Zeilen, dann ... */
+    -webkit-line-clamp: 2;
+    /* max 2 Zeilen, dann ... */
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  .lightbox-img{
+  .lightbox-img {
     width: 100%;
     height: 100%;
     border-radius: 16px;
@@ -275,19 +289,23 @@ h1 {
     display: block;
   }
 
-  .lightbox-footer{
-    margin: 0;              /* wichtig */
-    padding: 0;             /* wichtig */
+  .lightbox-footer {
+    margin: 0;
+    /* wichtig */
+    padding: 0;
+    /* wichtig */
     gap: 20px;
     align-self: center;
   }
 
-  .prev, .next{
+  .prev,
+  .next {
     width: 56px;
     height: 56px;
   }
 
-  .prev img, .next img{
+  .prev img,
+  .next img {
     width: 56px;
     height: 56x;
   }
@@ -300,6 +318,7 @@ h1 {
     justify-content: center;
     margin: 0 auto;
   }
+
   h1 {
     font-size: 24px;
   }
