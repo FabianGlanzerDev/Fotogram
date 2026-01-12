@@ -11,7 +11,10 @@ body {
   overflow-x: hidden; /* hiermit verstecke ich den NEREVIGEN Scrollbalken und muss somit nicht 100 Media Querries erstellen, bei hidden schneidet er die Objekte die Breiter sind einfach ab*/
 }
 
-
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;  /* verhindert Wischen/Scrollen auf Touch-screens */
+}
 .header {
   width: 100%;
   height: 80px;
@@ -82,7 +85,6 @@ h1 {
   align-items: start;
   padding-bottom: 160px;
   color: white;
-
 }
 
 /* Bild-Karten-Look */
@@ -94,6 +96,7 @@ h1 {
   border: 2px solid rgba(255, 255, 255, 0.10);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  cursor: pointer;
 }
 
 /*Hover'n*/
@@ -264,7 +267,7 @@ h1 {
   }
 
   h1 {
-    padding top: 40px;
+    padding-top: 40px;
   }
 
   .lightbox-header {
@@ -304,7 +307,7 @@ h1 {
   .prev img,
   .next img {
     width: 56px;
-    height: 56x;
+    height: 56px;
   }
 }
 

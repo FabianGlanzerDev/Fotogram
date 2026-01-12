@@ -20,7 +20,7 @@
 <main class="main">
     <h1>Your personal photo album</h1>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <img src="./img/coal-power-plant-6972028_1920.jpg" alt="Kohlekraftwerk mit Schornsteinen">
         <img src="./img/factory-2813380_1920.jpg" alt="sehr alte Industriefabrik">
         <img src="./img/factory-4338627_1920.jpg" alt="Große Industrieanlage mit Atommeiler">
@@ -41,9 +41,11 @@
             <div class="lightbox-header">
                 <span class="lightbox-title" id="lightbox-title">Bildname</span>
 
-                <button class="close" type="button" aria-label="Lightbox schließen">
+                <button id="close-btn" class="close" type="button" aria-label="Lightbox schließen">
                     &times;
                 </button>
+
+
             </div>
 
             <img class="lightbox-img" id="lightbox-img" alt="Alle Bilder" />
