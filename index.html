@@ -13,60 +13,48 @@
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
 </head>
 
-<header class="header">
-    <img class="fotogram_logo" src="./img/fotogram_logo.png" alt="Logo DA">
-</header>
+<body onload="render()">
+    <header class="header">
+        <img class="fotogram_logo" src="./img/fotogram_logo.png" alt="Logo DA">
+    </header>
 
-<main class="main">
-    <h1>Your personal photo album</h1>
+    <main class="main">
+        <h1>Your personal photo album</h1>
 
-    <section class="gallery" id="gallery">
-        <img src="./img/coal-power-plant-6972028_1920.jpg" alt="Kohlekraftwerk mit Schornsteinen">
-        <img src="./img/factory-2813380_1920.jpg" alt="sehr alte Industriefabrik">
-        <img src="./img/factory-4338627_1920.jpg" alt="Große Industrieanlage mit Atommeiler">
-        <img src="./img/fan-3645379_1920.jpg" alt="Industrieller Ventilator">
-        <img src="./img/ferrybridge-5428427_1920.jpg" alt="Kohlekraftwerk Ferrybridge">
-        <img src="./img/hydroelectric-power-station-1264100_1920.jpg" alt="Wasserkraftwerk mit Staumauer">
-        <img src="./img/hydropower-plant-6587753_1920.jpg" alt="Wehranlage mit Wehrklappe auf">
-        <img src="./img/power-plant-1320184_1920.jpg" alt="Großes Wasserkraftwerk">
-        <img src="./img/power-plant-2918331_1920.jpg" alt="Kraftwerk mit alten Elektromotoren">
-        <img src="./img/power-plant-344231_1920.jpg" alt="Atomkraftwerk Zentralwarte">
-        <img src="./img/power-station-2802622_1920.jpg" alt="alte Fabrikshalle">
-        <img src="./img/power-station-6579092_1920.jpg" alt="Rauchende Kraftwerksanlage">
+        <section class="gallery" id="gallery"></section>
 
-    </section>
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title"
-            aria-describedby="lightbox-counter" tabindex="-1">
-            <div class="lightbox-header">
-                <span class="lightbox-title" id="lightbox-title">Bildname</span>
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="lightbox-title"
+                aria-describedby="lightbox-counter" tabindex="-1">
+                <div class="lightbox-header">
+                    <span class="lightbox-title" id="lightbox-title">Bildname</span>
 
-                <button id="close-btn" class="close" type="button" aria-label="Lightbox schließen">
-                    &times;
-                </button>
+                    <button id="close-btn" class="close" type="button" aria-label="Lightbox schließen">
+                        &times;
+                    </button>
 
 
-            </div>
+                </div>
 
-            <img class="lightbox-img" id="lightbox-img" alt="Alle Bilder" />
+                <img class="lightbox-img" id="lightbox-img" alt="Alle Bilder" />
 
-            <div class="lightbox-footer" aria-label="Bildnavigation">
-                <button class="prev" type="button" aria-label="Vorheriges Bild">
-                    <img src="./img/pfeil_links_zurück.png" alt="Bild Weiterschalten nach Links" />
-                </button>
+                <div class="lightbox-footer" aria-label="Bildnavigation">
+                    <button class="prev" type="button" aria-label="Vorheriges Bild">
+                        <img src="./img/pfeil_links_zurück.png" alt="Bild Weiterschalten nach Links" />
+                    </button>
 
-                <span class="lightbox-counter" id="lightbox-counter" aria-live="polite">
-                    1/12
-                </span>
+                    <span class="lightbox-counter" id="lightbox-counter" aria-live="polite">
+                        1/12
+                    </span>
 
-                <button class="next" type="button" aria-label="Nächstes Bild">
-                    <img src="./img/pfeil_rechts_weiter.png" alt="Bild Weiterschalten nach Rechts" />
-                </button>
+                    <button class="next" type="button" aria-label="Nächstes Bild">
+                        <img src="./img/pfeil_rechts_weiter.png" alt="Bild Weiterschalten nach Rechts" />
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    </body>
-    <script src="main.js"></script>
+</body>
+<script src="main.js"></script>
 </main>
 
 <footer class="footer">
