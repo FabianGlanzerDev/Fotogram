@@ -13,22 +13,23 @@ let currentIndex = 0;
 function updateLightbox() {
   const currentImg = images[currentIndex];
 
-  // Bild setzen
+  // Bild ausgeben bzw setzen //
   lightboxImg.src = currentImg.src;
   lightboxImg.alt = currentImg.alt || "";
 
-  // Titel setzen (Dateiname oder alt)
+  // Titel setzen (Dateiname oder alt) //
   if (titleEl) {
-    const filename = currentImg.src.split("/").pop(); // z.B. Alaska-810433_1280.jpg
+    const filename = currentImg.src.split("/").pop(); 
     titleEl.textContent = currentImg.alt || filename;
   }
 
-  // Counter setzen
+  // Counter setzen, also welches Bildnummer //
   if (counterEl) {
     counterEl.textContent = `${currentIndex + 1}/${images.length}`;
   }
 }
 
+// öffnen/schliessen lightbox//
 function openLightbox(index) {
   currentIndex = index;
   lightbox.style.display = "flex";
@@ -39,12 +40,12 @@ function closeLightbox() {
   lightbox.style.display = "none";
 }
 
-// Galerie-Klick
+// Galerie-Klick, öffnet die Bilder bzw DAS Bild //
 images.forEach((img, index) => {
   img.addEventListener("click", () => openLightbox(index));
 });
 
-// Buttons
+// Buttons vor und zurück//
 nextBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   currentIndex = (currentIndex + 1) % images.length;
@@ -53,30 +54,13 @@ nextBtn.addEventListener("click", (e) => {
 
 prevBtn.addEventListener("click", (e) => {
   e.stopPropagation();
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  currentIndex = (currentIndex - 1 + images.length) % images.length; //wenn beim let6zten Bild wird hiier dann zum ersten wieder weitergesprungen//
   updateLightbox();
-});
-
-closeBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  closeLightbox();
-});
-
-// Klick in Hintergrund schließt
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) closeLightbox();
-});
-
-// ESC=schließen
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && lightbox.style.display === "flex") {
-    closeLightbox();
-  }
 });
 
 //Pfeiltasten Weiterschalten//
 document.addEventListener("keydown", (e) => {
-  if (lightbox.style.display !== "flex") return; // nur wenn Lightbox offen
+  if (lightbox.style.display !== "flex") return; // nur wenn Lightbox offen //
 
   if (e.key === "Escape") {
     closeLightbox();
@@ -90,6 +74,23 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateLightbox();
+  }
+  // schliessn lightbox //
+});
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeLightbox();
+});
+
+// Klick in Hintergrund schließt //
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// ESC=schließen //
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox.style.display === "flex") {
+    closeLightbox();
   }
 });
 

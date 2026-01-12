@@ -7,8 +7,8 @@ body {
 
 html,
 body {
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: auto; /* macht das man ganz normal nach unten scrollen kann*/
+  overflow-x: hidden; /* hiermit verstecke ich den NEREVIGEN Scrollbalken und muss somit nicht 100 Media Querries erstellen, bei hidden schneidet er die Objekte die Breiter sind einfach ab*/
 }
 
 
@@ -75,8 +75,7 @@ h1 {
 .gallery {
   max-width: 1440px;
   margin: 0;
-  display: grid;
-  /* Automatisch so viele Spalten wie passen (mit px werden die Spalten kleiner und bilder passen sich anders an*/
+  display: grid;  /* Automatisch so viele Spalten wie passen (mit px werden die Spalten kleiner und bilder passen sich anders an*/
   grid-template-columns: repeat(auto-fit, 190px);
   gap: 22px;
   justify-content: center;
@@ -89,10 +88,8 @@ h1 {
 /* Bild-Karten-Look */
 .gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  /* macht alle Kacheln quadratisch */
+  aspect-ratio: 1 / 1;   /* macht alle Kacheln quadratisch */
   object-fit: cover;
-  /* kein Verzerren */
   border-radius: 14px;
   border: 2px solid rgba(255, 255, 255, 0.10);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
@@ -214,7 +211,6 @@ h1 {
   font-size: 16px;
   font-weight: 600;
   width: 64px;
-  /* feste Breite -> Buttons bleiben fix */
   text-align: center;
   font-variant-numeric: tabular-nums;
   /* Ziffern alle gleich breit */
@@ -229,10 +225,11 @@ h1 {
 }
 
 /*Tablet*/
-@media(max-width: 1024px) {
+@media(max-width: 1280px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 160px;
+    padding: 0 16px 56px;
   }
 
   h1 {
@@ -256,19 +253,22 @@ h1 {
     padding: 16px;
     display: grid;
     grid-template-rows: 64px 1fr 90px;
-    /* Header | Bild | Footer */
-    gap: 12px;
+    gap: 16px;
     overflow: hidden;
   }
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 160px;
+    padding: 0 16px 56px;
+    gap: 16px;
+  }
+
+  h1 {
+    padding top: 40px;
   }
 
   .lightbox-header {
     margin: 0;
-    /* wichtig */
     align-self: center;
   }
 
@@ -276,7 +276,6 @@ h1 {
     max-width: 80%;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    /* max 2 Zeilen, dann ... */
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
@@ -291,9 +290,7 @@ h1 {
 
   .lightbox-footer {
     margin: 0;
-    /* wichtig */
     padding: 0;
-    /* wichtig */
     gap: 20px;
     align-self: center;
   }
@@ -311,7 +308,16 @@ h1 {
   }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 624px) {
+  h1 {
+    font-size: 38px;
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+}
+
+
+@media(max-width: 483px) {
   .fotogram_logo {
     display: flex;
     align-items: center;
@@ -321,5 +327,7 @@ h1 {
 
   h1 {
     font-size: 24px;
+    padding-top: 40px;
+    padding-bottom: 56px;
   }
 }
